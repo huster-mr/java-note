@@ -22,7 +22,7 @@ public class ThreadPool {
                 private AtomicInteger index = new AtomicInteger(0);
                 @Override
                 public Thread newThread(Runnable r) {
-                    return new Thread(r, "FIXED_THREAD_POOL_" + index);
+                    return new Thread(r, "FIXED_THREAD_POOL_" + index.incrementAndGet());
                 }
             });
 
@@ -103,4 +103,5 @@ public class ThreadPool {
         scheduledAtFixedRateTest();
         scheduledWithFixedDelayTest();
     }
+
 }
