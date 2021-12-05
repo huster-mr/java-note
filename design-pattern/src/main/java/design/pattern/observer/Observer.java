@@ -5,5 +5,6 @@ package design.pattern.observer;
  * @Description
  * @Date 2021/12/3
  */
-public class Observer {
+public abstract class Observer {
+    public abstract void update();
 }
