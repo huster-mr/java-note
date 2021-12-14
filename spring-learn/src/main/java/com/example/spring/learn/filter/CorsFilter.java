@@ -31,7 +31,7 @@ public class CorsFilter implements Filter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain filterChain) throws IOException, ServletException {
         String safeOrigin = "*";
-        logger.info("doFilter start!");
+        logger.info("doFilter 前处理!");
         HttpServletResponse response = (HttpServletResponse) resp;
         HttpServletRequest request = (HttpServletRequest) req;
         if (StringUtils.isNoneBlank(request.getHeader("origin"))) {
@@ -46,6 +46,8 @@ public class CorsFilter implements Filter {
         response.setHeader("Access-Control-Expose-Headers",
                 "Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma, X-Requested-With, Content-Disposition");
         filterChain.doFilter(req, resp);
+
+        logger.info("doFilter 后处理");
     }
 
     @Override
