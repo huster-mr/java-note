@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/aop/test")
 public class AopTestController {
 
+
     @GetMapping("annotation/aspect")
     @AspectTest
     public String annotationAspect() {
