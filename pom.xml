@@ -12,6 +12,7 @@
         <module>design-pattern</module>
         <module>tiny-spring</module>
         <module>java-learn</module>
+        <module>leetcode</module>
     </modules>
 
     <properties>
