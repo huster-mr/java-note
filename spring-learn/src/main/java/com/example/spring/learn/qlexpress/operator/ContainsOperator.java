@@ -1,11 +1,11 @@
-package com.example.spring.learn.qlexpress;
+package com.example.spring.learn.qlexpress.operator;
 
 import com.ql.util.express.Operator;
 
 import java.util.Collection;
 
 /**
- * 自定义操作符，包含
+ * 自定义操作符，包含操作，适用于字符串和集合
  */
 public class ContainsOperator extends Operator {
 

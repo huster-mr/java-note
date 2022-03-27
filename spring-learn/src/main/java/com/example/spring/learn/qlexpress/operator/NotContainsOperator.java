@@ -1,4 +1,4 @@
-package com.example.spring.learn.qlexpress;
+package com.example.spring.learn.qlexpress.operator;
 
 import com.ql.util.express.Operator;
 
